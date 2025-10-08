@@ -1,5 +1,4 @@
 import defaultSettings from '@/settings'
-console.log('defaultSettings', defaultSettings)
 const { showSettings, fixedHeader, sidebarLogo } = defaultSettings
 
 const state = {

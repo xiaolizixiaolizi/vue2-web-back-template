@@ -1,5 +1,7 @@
 <template>
-  <div>permission-page</div>
+  <div>
+    给员工分配角色 给角色分配权限
+  </div>
 </template>
 
 <script>
