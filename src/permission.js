@@ -19,7 +19,6 @@ router.beforeEach((to, from, next) => {
       NProgress.done()
     } else {
       //当用户没有刷新页面时候 是有userInfo信息的, 一旦刷新就没有userInfo
-      console.log('store.state', store.state)
       if (!store.state.user.userInfo.userId) {
         store.dispatch('user/getUserInfo').then(() => next())
       } else next()
@@ -29,6 +28,7 @@ router.beforeEach((to, from, next) => {
     if (whiteList.includes(to.path)) {
       next()
     } else {
+      //没有token还想访问非登录页 直接定向到登陆页面
       next(`/login?redirect=${to.path}`)
       NProgress.done()
     }

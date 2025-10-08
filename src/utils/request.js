@@ -44,7 +44,7 @@ service.interceptors.response.use(
 )
 
 export default service
-const createRequestFn = (method) => (url, config) => service({ method, url, ...config })
+const createRequestFn = (method) => (url, config = {}) => service({ method, url, ...config })
 export const getData = createRequestFn('get')
 export const postData = createRequestFn('post')
 
