@@ -16,11 +16,7 @@
 					<template v-else>{{ defaultValue(scope.row[item.prop]) }}</template>
 				</template>
 			</el-table-column>
-			<template v-slot:empty>
-				<div class="v-empty">
-					<img class="el-empty__image" src="./img/empty.svg"><div class="el-empty__description">暂无数据</div>
-				</div> 
-			</template>
+			
 		</el-table>
 		<el-pagination
 			v-if="(payload || {}).showPagination !== false"
@@ -151,8 +147,7 @@ export default {
 			}
 			//多选
 			else if((this.payload || {}).isMultiChoiceTable){
-				console.log('val-多选',val)
-				this.multiChoiceData=val
+				this.multiChoiceData=JSON.parse(JSON.stringify(val))
 			}
 		},
 		getChoiceData() {
