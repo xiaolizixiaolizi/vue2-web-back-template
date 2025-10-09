@@ -1,5 +1,5 @@
 # vue-admin-template
-# 给员工分配角色 给角色分配权限
+# 给员工分配角色 给角色分配权限 v12.18.1
 English | [简体中文](./README-zh.md)
 
 > A minimal vue admin template with Element UI & axios & iconfont & permission control & lint
