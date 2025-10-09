@@ -10,7 +10,7 @@ import '@/styles/index.scss' // global css
 import App from './App'
 import store from './store'
 import router from './router'
-
+import VTable from '@/components/CompVtable.vue'
 import '@/icons' // icon
 import '@/permission' // permission control
 import { getData, postData } from '@/utils/request'
@@ -18,6 +18,7 @@ Vue.prototype.$getData = getData
 Vue.prototype.$postData = postData
 
 Vue.use(ElementUI, { locale })
+Vue.component('VTable', VTable)
 
 
 Vue.config.productionTip = false
