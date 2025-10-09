@@ -1,0 +1,50 @@
+<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+    }
+  }
+</script>
+
+<div id="app">
+  <div>{{ message }}</div>
+  <div v-html="strHtml"></div>
+  <div :aa="aa">324</div>
+  <div v-bind="objectOfAttrs">09</div>
+  {{ number + 1 }}
+
+  {{ ok ? 'YES' : 'NO' }}
+
+  {{ message.split('').reverse().join('') }}
+
+  <div :id="`list-${id}`"></div>
+
+</div>
+
+<script type="module">
+  import { createApp, ref } from 'vue'
+
+  const app = createApp({
+    setup() {
+      const message = ref('Hello vue222!')
+      const strHtml = ref('<div>3333</div>')
+      const aa = 1
+      const objectOfAttrs = {
+        id: 'container',
+        class: 'wrapper',
+        style: 'background-color:green',
+        bbb: 888
+      }
+      return {
+        message,
+        strHtml,
+        aa,
+        objectOfAttrs,
+        number: 9,
+        ok: true,
+        id: 9,
+      }
+    }
+  })
+  app.mount('#app')
+</script>

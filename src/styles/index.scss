@@ -3,6 +3,7 @@
 @import './transition.scss';
 @import './element-ui.scss';
 @import './sidebar.scss';
+@import './for.scss';
 
 body {
   height: 100%;
@@ -64,8 +65,10 @@ div:focus {
   padding: 10px;
   background: #f5f6f8;
   min-height: calc(100vh - 80px);
+
   .app-container {
     background-color: #fff;
+
     .app-tools {
       padding: 10px;
     }
@@ -646,6 +649,7 @@ div:focus {
     }
   }
 }
+
 .hr-block {
   margin: 10px 0;
 }

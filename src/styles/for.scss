@@ -1,0 +1,237 @@
+@for $i from 6 through 40 {
+    .fs-#{$i * 2} {
+        font-size: #{$i * 2}px;
+
+    }
+}
+
+
+
+$font-colors: #526ade, #666, #333, #000;
+
+// 循环生成类
+@each $color in $font-colors {
+    .fc-#{str-slice(inspect($color), 2)} {
+        color: $color;
+    }
+}
+
+
+$bgc-colors: #f5f6fa, #526ade, #fff, #e6e6e6;
+
+// 循环生成类
+@each $bgc in $bgc-colors {
+    .bgc-#{str-slice(inspect($bgc), 2)} {
+        background-color: $bgc;
+    }
+}
+
+.shadow-1 {
+
+    box-shadow: 0px 4px 20px 0px #EEEEEE80;
+}
+
+.border-b3b3b3 {
+    border: 1px solid #b3b3b3;
+}
+
+.border-d9d9d9 {
+    border: 1px solid #d9d9d9;
+
+}
+
+.border-526ade {
+    border: 1px solid #526ade;
+
+}
+
+.radius-4 {
+    border-radius: 4px;
+}
+
+.radius-8 {
+    border-radius: 8px;
+}
+
+.radius-12 {
+    border-radius: 12px;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+.ellipsis {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.break-all {
+    word-break: break-all;
+    white-space: normal;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+@for $i from 1 through 50 {
+    .ml-#{$i * 2} {
+        margin-left: #{$i * 2}px;
+
+    }
+}
+
+@for $i from 1 through 50 {
+    .mr-#{$i * 2} {
+        margin-right: #{$i * 2}px;
+
+    }
+}
+
+@for $i from 1 through 50 {
+    .mt-#{$i * 2} {
+        margin-top: #{$i * 2}px;
+
+    }
+}
+
+@for $i from 1 through 50 {
+    .mb-#{$i * 2} {
+        margin-bottom: #{$i * 2}px;
+    }
+}
+
+@for $i from 1 through 50 {
+    .pl-#{$i * 2} {
+        padding-left: #{$i * 2}px;
+    }
+}
+
+@for $i from 1 through 50 {
+    .pr-#{$i * 2} {
+        padding-right: #{$i * 2}px;
+    }
+}
+
+@for $i from 1 through 50 {
+    .pt-#{$i * 2} {
+        padding-top: #{$i * 2}px;
+    }
+}
+
+@for $i from 1 through 50 {
+    .pb-#{$i * 2} {
+        padding-bottom: #{$i * 2}px;
+    }
+}
+
+@for $i from 1 through 300 {
+    .w-#{$i * 2} {
+        width: #{$i * 2}px;
+
+    }
+}
+
+@for $i from 1 through 300 {
+    .h-#{$i * 2} {
+        height: #{$i * 2}px;
+
+    }
+}
+
+@for $i from 1 through 50 {
+    .lh-#{$i * 2} {
+        line-height: #{$i * 2}px;
+
+    }
+}
+
+@for $i from 1 through 50 {
+    .indent-#{$i * 2} {
+        text-indent: #{$i * 2}px;
+
+    }
+}
+
+.el-tooltip__popper.is-light.work-flow-popper {
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 12px 0 rgba(37, 38, 44, 0.18);
+    padding: 16px;
+}
+
+.el-dialog.work-flow-dialog {
+    .el-dialog__header {
+        padding: 0;
+
+        .el-dialog__close.el-icon-close {
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+}
